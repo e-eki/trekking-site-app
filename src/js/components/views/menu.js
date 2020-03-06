@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
+
 
 // меню
 export default class Menu extends PureComponent {
@@ -13,12 +13,12 @@ export default class Menu extends PureComponent {
     render() {
         debugger;
         const className = 'menu ' + (this.props.className ? this.props.className : '');
-
-        
         
         return (
             <div className = {className}>
-                
+                <div className = 'menu__items-block'>
+                    {this.props.menuItems}
+                </div>
 
                 <button onClick={this.props.changeColorTheme} className = 'menu__mode-button'>
                     {this.props.colorThemeTitle}

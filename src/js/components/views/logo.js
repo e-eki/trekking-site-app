@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { PureComponent } from 'react';
-import forumConst from '../../constants/forumConst';
+import siteConst from '../../constants/siteConst';
 
 // логотип
 export default class Logo extends PureComponent {
@@ -19,8 +19,8 @@ export default class Logo extends PureComponent {
                     name = 'logo'
                     className = 'logo__img' 
                     src = '/images/trekking_logo.png' 
-                    alt = {forumConst.forumName} 
-                    title = {forumConst.forumName}
+                    alt = {siteConst.siteName} 
+                    title = {siteConst.siteName}
                 >
                 </img>
             </div>

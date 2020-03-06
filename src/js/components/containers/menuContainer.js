@@ -2,10 +2,14 @@
 
 import Promise from 'bluebird';
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Menu from '../views/menu';
 import { setAlertData } from '../../actions/alertDataActions';
 import { setColorTheme } from '../../actions/forumDesignActions';
+import siteConst from '../../constants/siteConst';
+import siteContent from '../../constants/siteContent';
+import MenuItem from '../views/menuItem';
 
 // контейнер для меню
 class MenuContainer extends PureComponent {
@@ -15,6 +19,7 @@ class MenuContainer extends PureComponent {
 
         this.changeColorTheme = this.changeColorTheme.bind(this);
         this.getColorThemeButtonTitle = this.getColorThemeButtonTitle.bind(this);
+        this.getMenuItems = this.getMenuItems.bind(this);
     }
 
     // изменение темы оформления
@@ -22,19 +27,19 @@ class MenuContainer extends PureComponent {
         debugger;
 
         switch (this.props.colorTheme) {
-            case forumConst.colorThemes.day:
-                this.props.setColorTheme(forumConst.colorThemes.night);
-                this.props.changePageColorTheme(forumConst.colorThemes.night);
+            case siteConst.colorThemes.day:
+                this.props.setColorTheme(siteConst.colorThemes.night);
+                this.props.changePageColorTheme(siteConst.colorThemes.night);
                 break;
 
-            case forumConst.colorThemes.night:
-                this.props.setColorTheme(forumConst.colorThemes.day);
-                this.props.changePageColorTheme(forumConst.colorThemes.day);
+            case siteConst.colorThemes.night:
+                this.props.setColorTheme(siteConst.colorThemes.day);
+                this.props.changePageColorTheme(siteConst.colorThemes.day);
                 break;
         
             default:
-                this.props.setColorTheme(forumConst.colorThemes.night);
-                this.props.changePageColorTheme(forumConst.colorThemes.night);
+                this.props.setColorTheme(siteConst.colorThemes.night);
+                this.props.changePageColorTheme(siteConst.colorThemes.night);
                 break;
         }
     }
@@ -45,30 +50,57 @@ class MenuContainer extends PureComponent {
         let title;
 
         switch (this.props.colorTheme) {
-            case forumConst.colorThemes.day:
-              title = forumConst.colorThemeTitles.night;
+            case siteConst.colorThemes.day:
+              title = siteConst.colorThemeTitles.night;
               break;
 
-            case forumConst.colorThemes.night:
-                title = forumConst.colorThemeTitles.day;
+            case siteConst.colorThemes.night:
+                title = siteConst.colorThemeTitles.day;
                 break;
         
             default:
-                title = forumConst.colorThemeTitles.night;
+                title = siteConst.colorThemeTitles.night;
                 break;
         }
 
         return title;
+    }
+
+    getMenuItems() {
+        debugger;
+        const menuItems = [];
+
+        let itemKey = 0;
+
+        siteContent.blocksOrder.forEach(item => {
+            const block = siteContent[item];
+
+            if (block) {
+                const menuItem = <MenuItem
+                                    key={itemKey}
+                                    className = {block.name}
+                                    text = {block.menuHeading}
+                                />; 
+                
+                menuItems.push(menuItem);
+                itemKey++;
+            }
+        });
+
+        return menuItems;
     }
     
     render() {
         debugger;
         const colorThemeTitle = this.getColorThemeButtonTitle();
 
+        const menuItems = this.getMenuItems();
+
         return (
             <Menu
                 colorThemeTitle = {colorThemeTitle}
                 changeColorTheme = {this.changeColorTheme}
+                menuItems = {menuItems}
             />
         );
     }

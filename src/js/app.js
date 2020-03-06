@@ -1,6 +1,8 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { Router } from 'react-router';
+const createBrowserHistory = require("history").createBrowserHistory;    //?? через import
 import MainContainer from './components/containers/mainContainer';
 import HeaderContainer from './components/containers/headerContainer';
 import MenuContainer from './components/containers/menuContainer';
@@ -74,15 +76,17 @@ export default class App extends Component {
         <div className = {pageClassName}>
           <HeaderContainer/>
 
-          <HidingLayerContainer/>
+          <Router history={this.history}>
+            <HidingLayerContainer/>
 
-          <AlertFormContainer/>
+            <AlertFormContainer/>
 
-          <MenuContainer
-            changePageColorTheme = {this.changePageColorTheme}
-          />
+            <MenuContainer
+              changePageColorTheme = {this.changePageColorTheme}
+            />
 
-          <MainContainer/>
+            <MainContainer/>
+          </Router>
 
           <Footer className = 'page__footer '/>
         </div>
