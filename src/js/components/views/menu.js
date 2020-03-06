@@ -16,13 +16,15 @@ export default class Menu extends PureComponent {
         
         return (
             <div className = {className}>
+                <div className = 'menu__button-block'>
+                    <button onClick={this.props.changeColorTheme} className = 'menu__mode-button'>
+                        {this.props.colorThemeTitle}
+                    </button>
+                </div>
+                
                 <div className = 'menu__items-block'>
                     {this.props.menuItems}
                 </div>
-
-                <button onClick={this.props.changeColorTheme} className = 'menu__mode-button'>
-                    {this.props.colorThemeTitle}
-                </button>
             </div>
         )
     }

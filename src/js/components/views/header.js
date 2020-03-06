@@ -21,9 +21,9 @@ export default class Header extends PureComponent {
             <div className = {className}>
                 <Logo className = 'header__logo '/>
 
-                <div className = "header__note header_mobile" onClick = {this.props.showVersionInfo}>
+                {/* <div className = "header__note header_mobile" onClick = {this.props.showVersionInfo}>
                     beta - версия
-                </div>
+                </div> */}
 
                 <div className = "header__title">
                     <h1>{this.siteName}</h1>
