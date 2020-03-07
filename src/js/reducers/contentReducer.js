@@ -3,8 +3,8 @@
 import {Map} from 'immutable';
 import * as actionTypes from '../actions/actionTypes';
 
-// управление разделами меню
-export default function menuReducer(state = Map(), action) {
+// управление отображаемым контентом
+export default function contentReducer(state = Map(), action) {
 
   switch (action.type) {
     case actionTypes.SET_CURRENT_MENU_ITEM:

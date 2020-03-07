@@ -17,8 +17,7 @@ export default class Main extends PureComponent {
         
         return (
             <div className = {className}>
-
-                
+                {this.props.contentItems}
             </div>
         )
     }

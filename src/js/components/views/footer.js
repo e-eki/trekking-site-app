@@ -18,15 +18,15 @@ export default class Footer extends PureComponent {
         return (
             <div className = {className}>
                 <div className ="footer__title">
-                    Обратная связь: <a href={mailLink}>{siteConst.siteEmail}</a>
+                    Feedback: <a href={mailLink}>{siteConst.siteEmail}</a>
                 </div>
 
                 <div className ="footer__title">
-                    Site Content &#169; М. Крылова, 2020
+                    Content &#169; М. Крылова, 2020
                 </div>
 
                 <div className ="footer__title">
-                    Site Software &#169; В. А. Дремина, 2020
+                    Software &#169; В. А. Дремина, 2020
                 </div>
             </div>
         )

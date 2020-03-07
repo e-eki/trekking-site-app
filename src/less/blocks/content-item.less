@@ -1,0 +1,44 @@
+
+.content-item {
+
+
+    &__heading {
+
+    }
+
+    &__description {
+        text-align: justify;
+
+        
+    }
+
+    &_shown {
+        display: block;
+        -webkit-animation: content-item__description_shown @anim-time-description_shown forwards;
+                animation: content-item__description_shown @anim-time-description_shown forwards;
+    }
+
+    &_hidden {
+        display: none;
+    }
+}
+
+
+@-webkit-keyframes content-item__description_shown {   
+    from {
+        opacity: 0;        
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes content-item__description_shown {   
+    from {
+        opacity: 0;        
+    }
+    to {
+        opacity: 1;
+    }
+}
+

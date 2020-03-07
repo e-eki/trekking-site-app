@@ -15,19 +15,18 @@
 
     &__button-block {
         width: 100%;
-        margin-top: -4vh;
+        margin: 0.5vmin 0;
         z-index: 1;
+        display: flex;
+        justify-content: flex-end;
     }
     
     &__mode-button {
-        width: 135px;
-        font-size: 16px;
+        font-size: @menu-mode-button-font-size;
+        color: @mintcream;
+        padding: 2px 5px;
         display: flex;
         justify-content: flex-end;
-
-        @media (max-width: @screen-lg) {
-			max-width: 120px;
-		}
     }
 
     &__items-block {

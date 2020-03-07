@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import Menu from '../views/menu';
 import { setAlertData } from '../../actions/alertDataActions';
 import { setColorTheme } from '../../actions/forumDesignActions';
+import { setCurrentMenuItem } from '../../actions/contentActions';
 import siteConst from '../../constants/siteConst';
 import siteContent from '../../constants/siteContent';
 import MenuItem from '../views/menuItem';
@@ -69,17 +70,20 @@ class MenuContainer extends PureComponent {
     getMenuItems() {
         debugger;
         const menuItems = [];
-
         let itemKey = 0;
 
         siteContent.blocksOrder.forEach(item => {
             const block = siteContent[item];
 
             if (block) {
+                const className = (this.props.currentMenuItem === block.name) ? 'menu__item_active' : '';
+
                 const menuItem = <MenuItem
                                     key={itemKey}
-                                    className = {block.name}
-                                    text = {block.menuHeading}
+                                    className = {className}
+                                    name = {block.name}
+                                    heading = {block.menuHeading}
+                                    setCurrentMenuItem = {this.props.setCurrentMenuItem}
                                 />; 
                 
                 menuItems.push(menuItem);
@@ -101,6 +105,7 @@ class MenuContainer extends PureComponent {
                 colorThemeTitle = {colorThemeTitle}
                 changeColorTheme = {this.changeColorTheme}
                 menuItems = {menuItems}
+                // currentMenuItem = {this.props.currentMenuItem}
             />
         );
     }
@@ -108,7 +113,8 @@ class MenuContainer extends PureComponent {
 
 const mapStateToProps = function(store) {
     return {
-        colorTheme: store.forumDesignState.get('colorTheme'), 
+        colorTheme: store.forumDesignState.get('colorTheme'),
+        currentMenuItem: store.contentState.get('currentMenuItem'), 
     };
 };
 
@@ -119,6 +125,12 @@ const mapDispatchToProps = function(dispatch) {
         },
         setColorTheme: function(data) {
             dispatch(setColorTheme(data));
+        },
+        setAlertData: function(data) {
+            dispatch(setAlertData(data));
+        },
+        setCurrentMenuItem: function(data) {
+            dispatch(setCurrentMenuItem(data));
         }
     }
 }

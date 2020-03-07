@@ -179,12 +179,14 @@ module.exports = {
 		heading: 'Контакты',
 		description: <div>
 						<p>Телефон: <a href="tel:+79629750419">+7 (962) 975 04 19</a></p>
-						<p>E-mail: <a href="mailto:ifirtree@gmail.com">ifirtree@gmail.com</a></p>
-						{/* <p>Skype: <a href="skype:live:ifirtree"> live:ifirtree</a></p> */}
+						<p>E-mail: <a href="mailto:ya.snejnoya@ya.ru">ya.snejnoya@ya.ru</a></p>
+						{/* <p>Skype: <a href="skype:live:ifirtree"> live:ifirtree</a></p> */} 
 
 						<p>Я <a href="https://vk.com/margoseverguid">Вконтакте</a></p>
-
 						<p>Путешествия за снегом <a href="https://vk.com/tropanasever">Вконтакте</a></p>
+
+						<a>Я <a href="t.me/MargoSever">в Telegram</a></a>
+						<p>Путешествия за снегом <a href="http://t.elegram.ru/tropanasever">в Telegram</a></p>
 
 						<p>Путешествия за снегом <a href="https://www.youtube.com/channel/UCnAkW2xISc1g7SPvkxacPlA">на Youtube</a></p>
 					</div>

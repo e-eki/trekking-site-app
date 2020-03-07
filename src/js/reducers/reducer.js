@@ -2,13 +2,13 @@
 
 import { combineReducers } from 'redux';
 import alertDataReducer from './alertDataReducer';
-import menuReducer from './menuReducer';
+import contentReducer from './contentReducer';
 import forumDesignReducer from './forumDesignReducer';
 
 
 const reducer = combineReducers({
   alertDataState: alertDataReducer,
-  menuState: menuReducer,
+  contentState: contentReducer,
   forumDesignState: forumDesignReducer,
 });
 

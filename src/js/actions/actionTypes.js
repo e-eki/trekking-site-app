@@ -1,6 +1,6 @@
 'use strict';
 
-//---Menu actions
+//---Content actions
 export const SET_CURRENT_MENU_ITEM = 'SET_CURRENT_MENU_ITEM';
 
 //---Alert actions
