@@ -37,7 +37,7 @@ export default class App extends Component {
     const backgroundImage = getBackgroundImage();
 
     // установка фона в зависимости от времени суток
-    document.body.style.backgroundImage = "url('/images/kola_day.jpg')";
+    document.body.style.backgroundImage = backgroundImage;
   }
 
   // изменить тему оформления

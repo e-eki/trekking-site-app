@@ -30,7 +30,8 @@ class MainContainer extends PureComponent {
                 const className = (currentContentItem === block.name) ? 'content-item_shown' : 'content-item_hidden';
 
                 const contentItem = <ContentItem
-                                        key={itemKey}
+                                        key = {itemKey}
+                                        name = {block.name}
                                         className = {className}
                                         heading = {block.heading}
                                         description = {block.description}
