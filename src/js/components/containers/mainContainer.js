@@ -21,11 +21,13 @@ class MainContainer extends PureComponent {
         const contentItems = [];
         let itemKey = 0;
 
+        const currentContentItem = this.props.currentMenuItem ? this.props.currentMenuItem : siteContent.defaultBlock;
+
         siteContent.blocksOrder.forEach(item => {
             const block = siteContent[item];
 
             if (block) {
-                const className = (this.props.currentMenuItem === block.name) ? 'content-item_shown' : 'content-item_hidden';
+                const className = (currentContentItem === block.name) ? 'content-item_shown' : 'content-item_hidden';
 
                 const contentItem = <ContentItem
                                         key={itemKey}

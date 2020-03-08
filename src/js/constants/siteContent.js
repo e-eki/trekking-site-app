@@ -13,6 +13,9 @@ module.exports = {
 		'forumBlock',
 	],
 
+	// раздел, который показываем при входе на сайт
+	defaultBlock: 'trekkingCalendarBlock',
+
 	// раздел "Календарь походов"
 	trekkingCalendarBlock: {
 		name: 'trekkingCalendarBlock',
@@ -185,7 +188,7 @@ module.exports = {
 						<p>Я <a href="https://vk.com/margoseverguid">Вконтакте</a></p>
 						<p>Путешествия за снегом <a href="https://vk.com/tropanasever">Вконтакте</a></p>
 
-						<a>Я <a href="t.me/MargoSever">в Telegram</a></a>
+						<p>Я <a href="t.me/MargoSever">в Telegram</a></p>
 						<p>Путешествия за снегом <a href="http://t.elegram.ru/tropanasever">в Telegram</a></p>
 
 						<p>Путешествия за снегом <a href="https://www.youtube.com/channel/UCnAkW2xISc1g7SPvkxacPlA">на Youtube</a></p>
