@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { PureComponent } from 'react';
+import siteConst from '../../../constants/siteConst';
 
 // всплывающее окно
 export default class PopupForm extends PureComponent {
@@ -25,14 +26,14 @@ export default class PopupForm extends PureComponent {
 		// const left = clientWidth/2 - 270 + scrollLeft;
 		style = {top: top};
 
-		// return style;   //?
+		return style;
 	}
 
 	render() {
 		debugger;
 		let className = 'popup-form ' + (this.props.className ? this.props.className : '');
 		
-		if (this.props.colorTheme === forumConst.colorThemes.night) {
+		if (this.props.colorTheme === siteConst.colorThemes.night) {
 			className += 'popup-form_night-mode';
 		}
 		else {

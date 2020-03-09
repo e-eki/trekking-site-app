@@ -1,19 +1,15 @@
 
 .image {
-	height: 60vh;
+	height: 50vmin;
 	width: 100%;
 	background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     cursor: default;
-    // margin-top: 5vh;
 
 	transform: scale(1);
     transition: transform @anim-time-image;
-    
-    @media (max-width: @screen-md) {
-        height: 40vh;
-    }
+    margin-top: 2vmin;
 
     &_margin-top {
         margin-top: 5vh;
@@ -21,17 +17,17 @@
 
 	&_can-zoom-in {
         margin-top: 5vh;
+    }
 
-        :hover {
-            transform: scale(1.5);
-            max-width: 60vw;
-            margin: auto;
-            margin-top: 20%;
-            margin-bottom: 20%;
-            transition: transform @anim-time-image;
-            // z-index: 1;
-            cursor: zoom-in;
-        }
+    &_can-zoom-in:hover {
+        transform: scale(1.5);
+        max-width: 60vw;
+        margin: auto;
+        margin-top: 20%;
+        margin-bottom: 20%;
+        transition: transform @anim-time-image;
+        // z-index: 1;
+        cursor: zoom-in;
     }
 
     // trekking calendar block

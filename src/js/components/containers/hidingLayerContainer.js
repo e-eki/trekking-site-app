@@ -16,8 +16,8 @@ class HidingLayerContainer extends PureComponent {
         debugger;
 
         // всплывающее окно показано, если:
-        // есть оповещение для юзера
-        const isPopupFormShown = this.props.alertData;
+        // есть оповещение для юзера или открыта форма обратной связи
+        const isPopupFormShown = this.props.alertData || this.props.currentFeedback;
 
 
         const hidingLayer = isPopupFormShown
@@ -35,6 +35,7 @@ class HidingLayerContainer extends PureComponent {
 const mapStateToProps = function(store) {
     return {
         alertData: store.alertDataState.get('alertData'),
+        currentFeedback: store.feedbackState.get('currentFeedback'),
     };
 };
 

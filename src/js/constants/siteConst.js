@@ -1,6 +1,8 @@
 'use strict';
 
 module.exports = {
+	defaultLink: '/',
+
 	// название сайта
 	siteName: 'Путешествия за снегом',
 
@@ -17,5 +19,17 @@ module.exports = {
 	colorThemeTitles: {
 		day: 'Дневной режим',
 		night: 'Ночной режим',
+	},
+
+	// значения полей ввода по умолчанию
+	defaultInputsData: {
+		email: 'Введите e-mail',
+		name: 'Введите имя',
+		text: 'Введите текст',
+	},
+
+	// значения полей ввода для предупреждения о некорректных данных
+	warningInputsData: {
+		email: 'Введите корректный e-mail',
 	},
 }

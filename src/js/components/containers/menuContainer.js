@@ -3,7 +3,6 @@
 import Promise from 'bluebird';
 import React, { PureComponent } from 'react';
 // import scrollToComponent from 'react-scroll-to-component';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Menu from '../views/menu';
 import { setAlertData } from '../../actions/alertDataActions';

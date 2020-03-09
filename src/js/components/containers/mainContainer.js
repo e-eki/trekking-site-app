@@ -4,7 +4,12 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import Main from '../views/main';
 import siteContent from '../../constants/siteContent';
+import siteConst from '../../constants/siteConst';
 import ContentItem from '../views/contentItem';
+import { showErrorMessage } from '../../utils/baseUtils';
+import { sendFeedback } from '../../api/feedbackApi';
+import { setCurrentFeedback } from '../../actions/feedbackActions';
+import { setAlertData } from '../../actions/alertDataActions';
 
 // контейнер для главной страницы
 class MainContainer extends PureComponent {
@@ -12,7 +17,42 @@ class MainContainer extends PureComponent {
     constructor(props) {
         super(props);
 
+        this.showFeedbackForm = this.showFeedbackForm.bind(this);
+        this.hideFeedbackForm = this.hideFeedbackForm.bind(this);
+        this.doSendFeedback = this.doSendFeedback.bind(this);
         this.getContentItems = this.getContentItems.bind(this);
+    }
+
+    // показать форму обратной связи
+    showFeedbackForm() {
+        debugger;
+        this.props.setCurrentFeedback(true);
+    }
+
+    // скрыть форму обратной связи
+    hideFeedbackForm() {
+        debugger;
+        this.props.setCurrentFeedback(null);
+    }
+
+    // отправить фидбек
+    doSendFeedback(name, email, text) {
+        return sendFeedback(name, email, text)
+			.then(response => {
+                const alertData = {
+                    message: 'Ваше письмо успешно отправлено.',   //?
+                    // secondaryMessage: 'На главную',
+                    // secondaryLink: appConst.defaultLink,
+                    link: siteConst.defaultLink,
+                };
+
+                this.props.setCurrentFeedback(false);
+                this.props.setAlertData(alertData);
+			})
+			.catch(error => {
+                showErrorMessage(error);
+                return false;
+            })
     }
 
     getContentItems() {
@@ -35,6 +75,12 @@ class MainContainer extends PureComponent {
                                         className = {className}
                                         heading = {block.heading}
                                         description = {block.description}
+                                        colorTheme = {this.props.colorTheme}
+
+                                        currentFeedback  ={this.props.currentFeedback}
+                                        showFeedbackForm = {this.showFeedbackForm}
+                                        hideFeedbackForm = {this.hideFeedbackForm}
+                                        doSendFeedback = {this.doSendFeedback}
                                     />; 
                 
                 contentItems.push(contentItem);
@@ -62,13 +108,19 @@ class MainContainer extends PureComponent {
 const mapStateToProps = function(store) {
     return {
         colorTheme: store.forumDesignState.get('colorTheme'),
-        currentMenuItem: store.contentState.get('currentMenuItem'), 
+        currentMenuItem: store.contentState.get('currentMenuItem'),
+        currentFeedback: store.feedbackState.get('currentFeedback'),
     };
 };
 
 const mapDispatchToProps = function(dispatch) {
-    return {
-        
+    return {   
+        setCurrentFeedback: function(data) {
+            dispatch(setCurrentFeedback(data));
+        },
+        setAlertData: function(data) {
+            dispatch(setAlertData(data));
+        }
     }
 }
 
