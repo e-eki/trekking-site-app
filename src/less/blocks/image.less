@@ -1,0 +1,91 @@
+
+.image {
+	height: 60vh;
+	width: 100%;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: default;
+    // margin-top: 5vh;
+
+	transform: scale(1);
+    transition: transform @anim-time-image;
+    
+    @media (max-width: @screen-md) {
+        height: 40vh;
+    }
+
+    &_margin-top {
+        margin-top: 5vh;
+    }
+
+	&_can-zoom-in {
+        margin-top: 5vh;
+
+        :hover {
+            transform: scale(1.5);
+            max-width: 60vw;
+            margin: auto;
+            margin-top: 20%;
+            margin-bottom: 20%;
+            transition: transform @anim-time-image;
+            // z-index: 1;
+            cursor: zoom-in;
+        }
+    }
+
+    // trekking calendar block
+    &_past-events-review-0 {
+        background-image: url('/images/calendar/past-events-reviews/review_0.jpg');
+    }
+
+    &_past-events-review-1 {
+        background-image: url('/images/calendar/past-events-reviews/review_1.jpg');
+    }
+
+    &_past-events-review-2 {
+        background-image: url('/images/calendar/past-events-reviews/review_2.jpg');
+    }
+
+    &_past-events-review-3 {
+        background-image: url('/images/calendar/past-events-reviews/review_3.jpg');
+    }
+
+    &_calendar-image-0 {
+        background-image: url('/images/calendar/image_0.jpg');
+    }
+
+    // about me block
+    &_about-me-image-0 {
+        background-image: url('/images/about-me/image_0.jpg');
+    }
+
+    // rules block
+    &_rules-image-0 {
+        background-image: url('/images/rules/image_0.jpg');
+    }
+
+    &_rules-image-1 {
+        background-image: url('/images/rules/image_1.jpg');
+    }
+
+    &_rules-image-2 {
+        background-image: url('/images/rules/image_2.jpg');
+    }
+
+    &_rules-image-3 {
+        background-image: url('/images/rules/image_3.jpg');
+    }
+
+    &_rules-image-4 {
+        background-image: url('/images/rules/image_4.jpg');
+    }
+
+    &_rules-image-5 {
+        background-image: url('/images/rules/image_5.jpg');
+    }
+
+    &_rules-image-6 {
+        background-image: url('/images/rules/image_6.jpg');
+    }
+}

@@ -4,7 +4,7 @@
     &__heading {
         font-family: cursive;
         font-size: @content-heading-font-size;
-        padding-bottom: 1vh;
+        padding-bottom: 3vh;
         font-weight: bold;
         color: @blue;
         text-align: center;
@@ -12,20 +12,31 @@
 
     &__description {
         text-align: justify;
-
-        
     }
 
     &__title {
         font-family: cursive;
         font-size: @content-heading-font-size;
-        padding-bottom: 1vh;
+        padding-top: 1vh;
         font-weight: bold;
         color: @blue;
         text-align: center;
     }
 
     &__subtitle {
+        font-family: cursive;
+        font-size: @content-subtitle-font-size;
+        font-weight: bold;
+        color: @blue;
+    }
+
+    &_margin-top {
+        margin-top: 5vh;
+    }
+
+    &_no-margin-top {
+        margin-block-start: -10px;
+        // margin-top: -10px;   //?
     }
 
     &_shown {

@@ -31,76 +31,98 @@ module.exports = {
 						</p>
 
 						<div className = 'past-events-description'>
-							----------------
+							<div
+								className = 'image image_can-zoom-in image_past-events-review-0' 
+								alt = 'отзыв 0'>
+							</div>
+
+							<div
+								className = 'image image_can-zoom-in image_past-events-review-1' 
+								alt = 'отзыв 1'>
+							</div>
+
+							<div
+								className = 'image image_can-zoom-in image_past-events-review-2' 
+								alt = 'отзыв 2'>
+							</div>
+
+							<div
+								className = 'image image_can-zoom-in image_past-events-review-3' 
+								alt = 'отзыв 3'>
+							</div>
 						</div>
 
 						<div className = 'future-events-description'>
+
 							<p className = 'content-item__title'>ЗИМА</p>
+
+							<div
+								className = 'image image_calendar-image-0' >
+							</div>
 
 							<p className = 'content-item__subtitle'>Февраль</p>
 
 							<p><span className = 'content-item__subtitle'>9 февраля</span> на снегоступах к Ладоге.</p>
-							<p>Прогулка без ночевки.</p>
+							<p className = 'content-item content-item_no-margin-top'>Прогулка без ночевки.</p>
 							
 							<p><span className = 'content-item__subtitle'>23 февраля</span> на снегоступах к озерам Карельского перешейка.</p>
-							<p>Прогулка без ночевки.</p>
+							<p className = 'content-item content-item_no-margin-top'>Прогулка без ночевки.</p>
 
 							<p className = 'content-item__subtitle'>Март</p>
 
 							<p><span className = 'content-item__subtitle'>8-9 марта</span> на снегоступах к озерам Кузнечного.</p>
-							<p>Ночуем на снегу.</p>
+							<p className = 'content-item content-item_no-margin-top'>Ночуем на снегу.</p>
 
 							<p><span className = 'content-item__subtitle'>21-22 марта</span> на снегоступах к Ладоге. Залив Лехмалахти. </p>
-							<p>Ночуем на снегу. Празднуем весеннее равноденствие.</p>
+							<p className = 'content-item content-item_no-margin-top'>Ночуем на снегу. Празднуем весеннее равноденствие.</p>
 
 							<p className = 'content-item__subtitle'>Апрель</p>
 
 							<p><span className = 'content-item__subtitle'>1-10 апреля</span> на снегоступах в Хибины. Живем на КСП Куэльпорр.</p>
-							<p>Ходим пер. Вост. Петрелиуса, Умбозерский, Юж. Рисчорр.</p>
+							<p className = 'content-item content-item_no-margin-top'>Ходим пер. Вост. Петрелиуса, Умбозерский, Юж. Рисчорр.</p>
 
 							<p className = 'content-item__title'>ЛЕТО</p>
 
 							<p className = 'content-item__subtitle'>Май</p>
 
 							<p><span className = 'content-item__subtitle'>1-6 Майские</span> в Заонежье. Пегрема, разведка водного трансфера.</p>
-							<p>Поход по себестоимости.</p>
+							<p className = 'content-item content-item_no-margin-top'>Поход по себестоимости.</p>
 
 							<p className = 'content-item__subtitle'>Июнь</p>
 
 							<p><span className = 'content-item__subtitle'>20-27 июня</span> Солнцестояние на Нуорунен. Нац. парк Паанаярви.</p>
-							<p>Северная Карелия.</p>
+							<p className = 'content-item content-item_no-margin-top'>Северная Карелия.</p>
 
 							<p className = 'content-item__subtitle'>Июль</p>
 
 							<p><span className = 'content-item__subtitle'>11-25 июля</span> Плато Путорана.</p>
-							<p>Поход-разведка вместе с ТурКлубом ПиК.</p>
+							<p className = 'content-item content-item_no-margin-top'>Поход-разведка вместе с ТурКлубом ПиК.</p>
 
 							<p className = 'content-item__subtitle'>Август</p>
 
-							<p><span className = 'content-item__subtitle'>31июля - 8 августа</span> Ловозерские тундры.</p>
-							<p>Сейдозеро с ТурКлубом ПиК.</p>
+							<p><span className = 'content-item__subtitle'>31 июля - 8 августа</span> Ловозерские тундры.</p>
+							<p className = 'content-item content-item_no-margin-top'>Сейдозеро с ТурКлубом ПиК.</p>
 
 							<p><span className = 'content-item__subtitle'>10-18 августа</span> Хибины с ТурКлубом ПиК.</p>
 
 							<p><span className = 'content-item__subtitle'>20-28 августа</span> Хибины без рюкзаков с ТурКлубом ПиК.</p>
-							<p>Живем на КСП Куэльпорр, ходим Сев. Чоргорр.</p>
+							<p className = 'content-item content-item_no-margin-top'>Живем на КСП Куэльпорр, ходим Сев. Чоргорр.</p>
 
-							<p className = 'content-item__subtitle'>ОСЕНЬ</p>
+							<p className = 'content-item__title'>ОСЕНЬ</p>
 
 							<p className = 'content-item__subtitle'>Сентябрь</p>
 
 							<p><span className = 'content-item__subtitle'>11-19 сентября</span> Ловозерские тундры.</p>
-							<p>Сейдозеро с ТурКлубом ПиК.</p>
+							<p className = 'content-item content-item_no-margin-top'>Сейдозеро с ТурКлубом ПиК.</p>
 
 							<p className = 'content-item__subtitle'>Ноябрь</p>
 
 							<p><span className = 'content-item__subtitle'>1-6 ноября</span> Самайн на Воттовааре.</p>
-							<p>Карелия вместе с Проектом 61\30.</p>
+							<p className = 'content-item content-item_no-margin-top'>Карелия вместе с Проектом 61\30.</p>
 
-							<p>Подробнее о каждом походе можно узнать у меня. Пишите, Друзья!</p>
-							<p><span className = 'content-item__subtitle'>И до встречи на Северной тропе!)</span></p>
+							<p className = 'content-item content-item_margin-top'>Подробнее о каждом походе можно узнать у меня. Пишите, Друзья!</p>
+							<p className = 'content-item__subtitle content-item_no-margin-top'>И до встречи на Северной тропе!)</p>
 						</div>
-						
 					</div>
 	},
 
@@ -110,7 +132,11 @@ module.exports = {
 		menuHeading: 'Обо мне',
 		heading: 'Обо мне',
 		description: <div>
-						<p>Добро пожаловать в тундру, Друзья!</p>
+						<div
+							className = 'image image_about-me-image-0'>
+						</div>
+
+						<p className = 'content-item__subtitle'>Добро пожаловать в тундру, Друзья!</p>
 						<p>В этом сообществе я хочу рассказать вам о своих путешествиях.</p>
 						<p>Много лет подряд, я уезжаю вслед за отступающей зимой на Север и провожу короткий сезон открытой пешеходной тропы в Хибинах и Ловоозерских тундрах, открывая для себя этот суровый и потрясающий край.</p>
 						<p>Много зим подряд, я путешествую вслед за метелями, уезжаю высоко в южные горы вместе с моей доской. Драгобрат, Буковель, Парнассос, Гуадаури, Яхорина - снежные путешествия открывали мне удивительные, новые вершины и склоны, знакомили с такими разными народами, их кухней и обычаями.</p>
@@ -126,10 +152,21 @@ module.exports = {
 		menuHeading: 'Маршруты путешествий',
 		heading: 'Маршруты путешествий',
 		description: <div>
-						<p>Мурманская область</p>
-						<p>Карелия</p>
-						<p>Ленинградская область</p>
-						<p>Красноярский край</p>
+						<p>
+							<a className = 'kola-link' href="/">Мурманская область</a>
+						</p>
+
+						<p>
+							<a className = 'krl-link' href="/">Карелия</a>
+						</p>
+
+						<p>
+							<a className = 'len-link' href="/">Ленинградская область</a>
+						</p>
+
+						<p>
+							<a className = 'putoran-link' href="/">Красноярский край</a>
+						</p>
 					</div>
 	},
 
@@ -139,7 +176,11 @@ module.exports = {
 		menuHeading: 'Свод правил',
 		heading: 'Свод правил пользования тундрой',
 		description: <div>
-						<p>1. ВЕСЬ свой мусор внимательно утилизируй!</p>
+						<div
+							className = 'image image_rules-image-0'>
+						</div>
+
+						<p className = 'content-item__subtitle content-item_margin-top'>1. ВЕСЬ свой мусор внимательно утилизируй!</p>
 						
 						<p>Ни одного следа не оставляй после себя на тропе и стоянках.</p>
 
@@ -149,7 +190,11 @@ module.exports = {
 						
 						<p>Пищевые остатки с котлов, очистки от рыбы и овощей, туалетную бумагу нужно закапывать поглубже и подальше от стоянок, троп и водоемов. Не привлекай к стоянке диких зверей и не будь засранцем.</p>
 						
-						<p>2. Помни о чистоте питьевой воды!</p>
+						<div
+							className = 'image image_rules-image-1'>
+						</div>
+
+						<p className = 'content-item__subtitle content-item_margin-top'>2. Помни о чистоте питьевой воды!</p>
 
 						<p>Не сливай с посуды и котлов остатки пищи в горные озера и реки. Там рыбы нет, а всем последующим полуразложившиеся макароны не в радость.</p>
 						
@@ -159,19 +204,31 @@ module.exports = {
 						
 						<p>Помни — внизу по течению тоже люди.</p>
 
-						<p>3. Не гадь на тропе!!!</p>
+						<div
+							className = 'image image_rules-image-2'>
+						</div>
+
+						<p className = 'content-item__subtitle content-item_margin-top'>3. Не гадь на тропе!!!</p>
 
 						<p>Никто не должен натыкаться на твои следы. Будь как ниндзя!</p>
 						
 						<p>Закапывай свои бумажки поглубже в дальних кустах, под мох или в камни.</p>
 
-						<p>4. Бережно относись к природе.</p>
+						<div
+							className = 'image image_rules-image-3'>
+						</div>
+
+						<p className = 'content-item__subtitle content-item_margin-top'>4. Бережно относись к природе.</p>
 
 						<p>Не рви букеты\венки, срывай растения аккуратно и только для еды\чая. Не руби зеленые деревья и их ветви — они не горят.</p>
 						
 						<p>Не обдирай лапник под палатку, кору на растопку, не строй шалаши выживания. Все тоже самое можно сделать со снаряжением. Туристов по тропам ходит много, а дерево растет долго. Оставь стоянку красивой, а не лысой!</p>
 						
-						<p>5. Разводи костер ТОЛЬКО в готовом кострище. Всегда внимательно туши огонь.</p>
+						<div
+							className = 'image image_rules-image-4'>
+						</div>
+
+						<p className = 'content-item__subtitle content-item_margin-top'>5. Разводи костер ТОЛЬКО в готовом кострище. Всегда внимательно туши огонь.</p>
 						
 						<p>Стоянок на тропах много, всегда можно дойти до уже готового и прогоревшего места.</p>
 						
@@ -179,10 +236,23 @@ module.exports = {
 						
 						<p>В горах, где дров практически нет, используй для готовки еды газ. Те немногие дрова, что есть на камнях, возможно, спасут кому-то жизнь в холод и непогоду.</p>
 						
-						<p>И самое важное, ведь чисто там, где убирают</p>
-						<p>Оставь стоянку чище, чем она была до тебя.</p>
-						<p>Разводя костер, собери старый пластик вокруг стоянки и сожги его.</p>
-						<p>Сделай тундре хорошо!</p>
+						<div
+							className = 'image image_rules-image-5'>
+						</div>
+
+						<div className = 'content-item__subtitle content-item_margin-top'>
+							<p>И самое важное, ведь чисто там, где убирают.</p>
+
+							<p>Оставь стоянку чище, чем она была до тебя.</p>
+
+							<p className = 'content-item content-item_no-margin-top'>Разводя костер, собери старый пластик вокруг стоянки и сожги его.</p>
+							
+							<p>Сделай тундре хорошо!</p>
+						</div>
+
+						<div
+							className = 'image image_rules-image-6 image_margin-top'>
+						</div>
 					</div>
 	},
 
