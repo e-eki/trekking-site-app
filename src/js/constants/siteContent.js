@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import siteConst from './siteConst';
 
 module.exports = {
 	// порядок разделов
@@ -57,7 +58,7 @@ module.exports = {
 							<p className = 'content-item__title'>ЗИМА</p>
 
 							<div
-								className = 'image image_calendar-image-0' >
+								className = 'image image_calendar-image-0'>
 							</div>
 
 							<p className = 'content-item__subtitle'>Февраль</p>
@@ -137,7 +138,7 @@ module.exports = {
 						</div>
 
 						<p className = 'content-item__subtitle'>Добро пожаловать в тундру, Друзья!</p>
-						<p>В этом сообществе я хочу рассказать вам о своих путешествиях.</p>
+						<p>На этом сайте я хочу рассказать вам о своих путешествиях.</p>
 						<p>Много лет подряд, я уезжаю вслед за отступающей зимой на Север и провожу короткий сезон открытой пешеходной тропы в Хибинах и Ловоозерских тундрах, открывая для себя этот суровый и потрясающий край.</p>
 						<p>Много зим подряд, я путешествую вслед за метелями, уезжаю высоко в южные горы вместе с моей доской. Драгобрат, Буковель, Парнассос, Гуадаури, Яхорина - снежные путешествия открывали мне удивительные, новые вершины и склоны, знакомили с такими разными народами, их кухней и обычаями.</p>
 
@@ -165,7 +166,7 @@ module.exports = {
 						</p>
 
 						<p>
-							<a className = 'putoran-link' href="/">Красноярский край</a>
+							<a className = 'putoran-link' href="/">Красноярский край (new)</a>
 						</p>
 					</div>
 	},
@@ -262,17 +263,25 @@ module.exports = {
 		menuHeading: 'Контакты',
 		heading: 'Контакты',
 		description: <div>
-						<p>Телефон: <a href="tel:+79217635608">+7 (921) 763-56-08</a></p>
+						<div
+							className = 'image image_contacts-image-0'>
+						</div>
+
+						<p className = 'content-item content-item_margin-top'>Телефон: <a href="tel:+79217635608">+7 (921) 763-56-08</a></p>
+
 						<p>E-mail: <a href="mailto:ya.snejnoya@ya.ru">ya.snejnoya@ya.ru</a></p>
+
 						{/* <p>Skype: <a href="skype:live:ifirtree"> live:ifirtree</a></p> */} 
 
 						<p>Я <a href="https://vk.com/margoseverguid">Вконтакте</a></p>
-						<p>Путешествия за снегом <a href="https://vk.com/tropanasever">Вконтакте</a></p>
 
 						<p>Я <a href="https://t.me/MargoSever">в Telegram</a></p>
-						<p>Путешествия за снегом <a href="https://t.me/tropanasever">в Telegram</a></p>
 
-						<p>Путешествия за снегом <a href="https://www.youtube.com/channel/UCnAkW2xISc1g7SPvkxacPlA">на Youtube</a></p>
+						<p className = 'content-item__subtitle content-item_margin-top'>Путешествия за снегом <a href="https://vk.com/tropanasever">Вконтакте</a></p>
+
+						<p className = 'content-item__subtitle'>Путешествия за снегом <a href="https://t.me/tropanasever">в Telegram</a></p>
+
+						<p className = 'content-item__subtitle content-item_margin-bottom'>Путешествия за снегом <a href="https://www.youtube.com/channel/UCnAkW2xISc1g7SPvkxacPlA">на Youtube</a></p>
 					</div>
 	},
 
@@ -281,7 +290,11 @@ module.exports = {
 		name: 'forumBlock',
 		menuHeading: 'Форум',
 		heading: 'Форум',
-		description: <div></div>
+		description: <div>
+						<p className = 'content-item__subtitle'>
+							<a href={siteConst.forumLink}>Перейти на форум "Путешествий за снегом"</a>
+						</p>
+					</div>
 	},
 
 }

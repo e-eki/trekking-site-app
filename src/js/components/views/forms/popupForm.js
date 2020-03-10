@@ -22,7 +22,7 @@ export default class PopupForm extends PureComponent {
 		// const scrollLeft = document.documentElement.scrollLeft;
 		// const clientWidth = document.documentElement.clientWidth;
 
-		const top = clientHeight/2 - 90 + scrollTop;
+		const top = clientHeight/2 - 180 + scrollTop;
 		// const left = clientWidth/2 - 270 + scrollLeft;
 		style = {top: top};
 
@@ -30,7 +30,6 @@ export default class PopupForm extends PureComponent {
 	}
 
 	render() {
-		debugger;
 		let className = 'popup-form ' + (this.props.className ? this.props.className : '');
 		
 		if (this.props.colorTheme === siteConst.colorThemes.night) {

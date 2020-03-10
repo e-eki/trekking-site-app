@@ -2,7 +2,6 @@
 
 import Promise from 'bluebird';
 import React, { PureComponent } from 'react';
-// import scrollToComponent from 'react-scroll-to-component';
 import { connect } from 'react-redux';
 import Menu from '../views/menu';
 import { setAlertData } from '../../actions/alertDataActions';
@@ -23,19 +22,8 @@ class MenuContainer extends PureComponent {
         this.getMenuItems = this.getMenuItems.bind(this);
     }
 
-    // componentDidUpdate(prevProps) {
-    //     debugger;
-    //     // если перешли к другому разделу меню
-    //     if (prevProps.currentMenuItem !== this.props.currentMenuItem) {
-    //         // проскролливаем вверх к меню
-    //         scrollToComponent(this.menuRef, {align: 'top'});
-    //     }
-    // }
-
     // изменение темы оформления
     changeColorTheme() {
-        debugger;
-
         switch (this.props.colorTheme) {
             case siteConst.colorThemes.day:
                 this.props.setColorTheme(siteConst.colorThemes.night);
@@ -56,7 +44,6 @@ class MenuContainer extends PureComponent {
 
     // получить название кнопки для переключения темы оформления
     getColorThemeButtonTitle() {
-        debugger;
         let title;
 
         switch (this.props.colorTheme) {
@@ -76,8 +63,8 @@ class MenuContainer extends PureComponent {
         return title;
     }
 
+    // получить разделы меню
     getMenuItems() {
-        debugger;
         const menuItems = [];
         let itemKey = 0;
 
@@ -104,7 +91,6 @@ class MenuContainer extends PureComponent {
     }
     
     render() {
-        debugger;
         const colorThemeTitle = this.getColorThemeButtonTitle();
 
         const menuItems = this.getMenuItems();

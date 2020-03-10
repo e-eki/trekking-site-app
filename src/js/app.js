@@ -42,7 +42,6 @@ export default class App extends Component {
 
   // изменить тему оформления
   changePageColorTheme(colorTheme) {
-    debugger;
     const dayModeModificator = '_day-mode';
     const nightModeModificator = '_night-mode';
 
@@ -69,7 +68,6 @@ export default class App extends Component {
   }
 
   render() {
-    debugger;
     const pageClassName = 'page ' + this.state.pageClassName;
 
       return (

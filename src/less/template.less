@@ -17,32 +17,16 @@
 @import './blocks/image';
 @import './blocks/feedback-form';
 
-
-.header__title, .menu, .popup-form {
-	font-family: cursive;
-}
-
-.header__title, .menu, .popup-form {
-	button {
-		border-radius: 3px;
-	}
-}
-
-.popup-form {
-	button {
-		background: @lightyellow;
-		border-color: @orangegrey;
-
-		font-family: cursive;
-
-		margin-bottom: 1vmin;   //?
-	}
-}
-
 button {
 	cursor: pointer;
 	background: @blue;
 	border-color: @greyblue;
+	font-size: @button-font-size;
+    color: inherit;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: cursive;
 }
 
 a {

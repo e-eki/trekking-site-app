@@ -78,12 +78,11 @@ export default class FeedbackForm extends Component {
             return true;
         }
         else {
-            return this.props.doRegistration(this.state.email, this.state.login, this.state.password);
+            return this.props.doSendFeedback(this.state.name, this.state.email, this.state.text);
         }
 	}
 
 	render() {
-		debugger;
 		let className = 'feedback-form ' + (this.props.className ? this.props.className : '');
 
 		const data = <div className = {className}>

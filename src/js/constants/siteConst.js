@@ -6,6 +6,9 @@ module.exports = {
 	// название сайта
 	siteName: 'Путешествия за снегом',
 
+	// адрес форума
+	forumLink: 'https://snow-trekking-forum.herokuapp.com',
+
 	// имейл для обратной связи
 	siteEmail: 'snow.trekking.forum@gmail.com',
 

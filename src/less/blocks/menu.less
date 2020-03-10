@@ -13,21 +13,16 @@
         flex-direction: column;
     }
 
-    &__button-block {
-        width: 100%;
-        margin: 0.5vmin 0;
+    &__buttons-block {
+        margin: 1vmin;
         z-index: 1;
         display: flex;
         justify-content: flex-end;
     }
     
     &__mode-button {
-        font-size: @menu-mode-button-font-size;
-        color: @mintcream;
-        padding: 2px 5px;
-        display: flex;
-        justify-content: flex-end;
         opacity: 0.85;
+        font-size: @mode-button-font-size;
     }
 
     &__items-block {
@@ -58,6 +53,10 @@
         &_active .item-decor {
             -webkit-transform: rotateX(90deg) translateY(-22px);
             transform: rotateX(90deg) translateY(-22px);
+        }
+
+        a {  // костыль
+            font-size: @body-font-size;
         }
     }
 }

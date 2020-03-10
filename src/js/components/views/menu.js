@@ -11,7 +11,6 @@ export default class Menu extends PureComponent {
     }
 
     render() {
-        debugger;
         const className = 'menu ' + (this.props.className ? this.props.className : '');
         
         return (
@@ -20,7 +19,7 @@ export default class Menu extends PureComponent {
                     {this.props.menuItems}
                 </div>
 
-                <div className = 'menu__button-block'>
+                <div className = 'menu__buttons-block'>
                     <button onClick={this.props.changeColorTheme} className = 'menu__mode-button'>
                         {this.props.colorThemeTitle}
                     </button>

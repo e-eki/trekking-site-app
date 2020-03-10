@@ -25,13 +25,11 @@ class MainContainer extends PureComponent {
 
     // показать форму обратной связи
     showFeedbackForm() {
-        debugger;
         this.props.setCurrentFeedback(true);
     }
 
     // скрыть форму обратной связи
     hideFeedbackForm() {
-        debugger;
         this.props.setCurrentFeedback(null);
     }
 
@@ -40,10 +38,8 @@ class MainContainer extends PureComponent {
         return sendFeedback(name, email, text)
 			.then(response => {
                 const alertData = {
-                    message: 'Ваше письмо успешно отправлено.',   //?
-                    // secondaryMessage: 'На главную',
-                    // secondaryLink: appConst.defaultLink,
-                    link: siteConst.defaultLink,
+                    message: 'Ваше письмо было успешно отправлено.',
+                    // link: siteConst.defaultLink,
                 };
 
                 this.props.setCurrentFeedback(false);
@@ -55,18 +51,19 @@ class MainContainer extends PureComponent {
             })
     }
 
+    // получить разделы сайта
     getContentItems() {
-        debugger;
-
         const contentItems = [];
         let itemKey = 0;
 
+        // если не выбран текущий раздел меню, то берем раздел по умолчанию
         const currentContentItem = this.props.currentMenuItem ? this.props.currentMenuItem : siteContent.defaultBlock;
 
         siteContent.blocksOrder.forEach(item => {
             const block = siteContent[item];
 
             if (block) {
+                // текущий раздел показываем, все остальные скрываем
                 const className = (currentContentItem === block.name) ? 'content-item_shown' : 'content-item_hidden';
 
                 const contentItem = <ContentItem

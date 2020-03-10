@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import scrollToComponent from 'react-scroll-to-component';
 import Header from '../views/header';
 import { setAlertData } from '../../actions/alertDataActions';
 import siteConst from '../../constants/siteConst';
@@ -13,6 +14,11 @@ class HeaderContainer extends PureComponent {
         super(props);
 
         this.showVersionInfo = this.showVersionInfo.bind(this);
+    }
+
+    componentDidMount() {
+        // проскролливаем вверх после загрузки страницы
+        scrollToComponent(this.headerItem, {align: 'top'});   //todo: не работает
     }
 
     showVersionInfo() {
@@ -31,7 +37,7 @@ class HeaderContainer extends PureComponent {
     
     render() {
         return (
-            <Header
+            <Header ref={elem => this.headerItem = elem}
                 showVersionInfo = {this.showVersionInfo}
             />
         );

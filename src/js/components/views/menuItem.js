@@ -2,6 +2,8 @@
 
 import React, { PureComponent } from 'react';
 import scrollToComponent from 'react-scroll-to-component';
+import siteConst from '../../constants/siteConst';
+import siteContent from '../../constants/siteContent';
 
 // раздел меню
 export default class MenuItem extends PureComponent {
@@ -12,8 +14,8 @@ export default class MenuItem extends PureComponent {
         this.onClickMenuItem = this.onClickMenuItem.bind(this);
     }
 
+    // обработчик выбора раздела меню
     onClickMenuItem(event) {
-        debugger;
         this.props.setCurrentMenuItem(this.props.name);
 
         // проскролливаем вверх к этому разделу меню
@@ -23,12 +25,24 @@ export default class MenuItem extends PureComponent {
 
     render() {
         const menuClass = 'menu__item ' + (this.props.className ? this.props.className : '');
+
+        const menuItemData = <div className = "item-decor" data-hover = {this.props.heading}>
+                        {this.props.heading}
+                    </div>;
+
+        const data = (this.props.name === siteContent.forumBlock.name)
+                    ?
+                    <a href={siteConst.forumLink}>{menuItemData}</a>
+                    :
+                    menuItemData;
         
         return (
             <div ref={elem => this.menuItem = elem} className = {menuClass} onClick = {this.onClickMenuItem}>
-                <div className = "item-decor" data-hover = {this.props.heading}>
+                {/* <div className = "item-decor" data-hover = {this.props.heading}>
                     {this.props.heading}
-                </div>
+                </div> */}
+
+                {data}
             </div>
         )
     }
