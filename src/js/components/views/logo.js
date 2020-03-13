@@ -15,14 +15,18 @@ export default class Logo extends PureComponent {
         
         return (
             <div className = {className}>
-                <img 
-                    name = 'logo'
-                    className = 'logo__img' 
-                    src = '/images/trekking_logo.png' 
-                    alt = {siteConst.siteName} 
-                    title = {siteConst.siteName}
-                >
-                </img>
+                <a href={siteConst.forumLink}>
+                    <img 
+                        name = 'logo'
+                        className = 'logo__img' 
+                        src = '/images/trekking_logo.png' 
+                        alt = 'Перейти на форум'
+                        title = 'Перейти на форум'
+                        // alt = {siteConst.siteName} 
+                        // title = {siteConst.siteName}
+                    >
+                    </img>
+                </a>
             </div>
         )
     }
